@@ -13,7 +13,33 @@
     </asp:PlaceHolder>
     <webopt:bundlereference runat="server" path="~/Content/css" />
     <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <style type="text/css">
+        @font-face {
+            font-family: "Redacted";
+            src: url("fonts/web/redacted-regular.eot");
+            src: url("fonts/web/redacted-regular.woff") format("woff"),
+                 url("fonts/web/redacted-regular.otf") format("opentype"),
+                 url("fonts/web/redacted-regular.svg#filename") format("svg");
+        }
+        @font-face {
+            font-family: "Redacted Script";
+            src: url("fonts/web/redacted-script-bold.eot");
+            src: url("fonts/web/redacted-script-bold.woff") format("woff"),
+                 url("fonts/web/redacted-script-bold.otf") format("opentype"),
+                 url("fonts/web/redacted-script-bold.svg#filename") format("svg");
+        }
 
+        .prototype {
+            font-family: "Redacted";
+            color: #999;
+        }
+
+        .prototype-script {
+            font-family: "Redacted Script";
+            color: #999;
+        }
+
+    </style>
 </head>
 <body>
     <form runat="server">
