@@ -58,7 +58,6 @@
     <Compile Include="DAL\ApplicationDbContext.cs" />
     <Compile Include="DAL\RestaurantContext.cs" />
     <Compile Include="Entities\Reservation.cs" />
-    <Compile Include="Entities\Security\ApplicationRole.cs" />
     <Compile Include="Entities\Security\ApplicationUser.cs" />
     <Compile Include="Entities\SpecialEvent.cs" />
     <Compile Include="Entities\Table.cs" />

@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace eRestaurant.BLL.Security
 {
-    public class RoleManager : RoleManager<ApplicationRole>
+    public class RoleManager : RoleManager<IdentityRole>
     {
         public RoleManager()
-            : base(new RoleStore<ApplicationRole>(new ApplicationDbContext()))
+            : base(new RoleStore<IdentityRole>(new ApplicationDbContext()))
         {
         }
     }
