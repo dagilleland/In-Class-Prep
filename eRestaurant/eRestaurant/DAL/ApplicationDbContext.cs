@@ -8,7 +8,7 @@ using eRestaurant.Entities.Security;
 
 namespace eRestaurant.DAL
 {
-    internal class ApplicationDbContext : IdentityDbContext<ApplicationUser>
+    internal class ApplicationDbContext : IdentityDbContext<ApplicationUser, ApplicationRole, string, IdentityUserLogin, IdentityUserRole, IdentityUserClaim>
     {
         public ApplicationDbContext()
             : base("DefaultConnection")
