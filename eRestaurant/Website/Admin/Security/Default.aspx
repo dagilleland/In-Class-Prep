@@ -291,5 +291,6 @@
             </asp:ListView>
         </div>
 <%--                <EmptyDataTemplate>No roles in this site</EmptyDataTemplate>--%>
-    </div></asp:Content>
+    </div>
+</asp:Content>
 
