@@ -14,6 +14,12 @@ namespace eRestaurant.DAL
         public DbSet<SpecialEvent> SpecialEvents { get; set; }
         public DbSet<Reservation> Reservations { get; set; }
 
+        public DbSet<Bill> Bills { get; set; }
+        public DbSet<BillItem> BillItems { get; set; }
+        public DbSet<Item> Items { get; set; }
+        public DbSet<MenuCategory> MenuCategories { get; set; }
+        public DbSet<Waiter> Waiters { get; set; }
+
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder

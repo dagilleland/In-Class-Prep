@@ -12,13 +12,48 @@ public partial class Admin_Security_Default : System.Web.UI.Page
     {
         if (!IsPostBack)
         {
-            // Populate the Users Info
-              UserGridView.DataSource = new UserManager().Users.ToList();
-              UserGridView.DataBind();
+            DataBindUserList();
+            DataBindRoleList();
+        }
+    }
 
-            // Populate the Roles Info
-              RoleGridView.DataSource = new RoleManager().Roles.ToList();
-              RoleGridView.DataBind();
+    private void DataBindRoleList()
+    {
+        // Populate the Roles Info
+        RoleListView.DataSource = new RoleManager().Roles.ToList();
+        RoleListView.DataBind();
+    }
+
+    private void DataBindUserList()
+    {
+        // Populate the Users Info
+        UserListView.DataSource = new UserManager().Users.ToList();
+        UserListView.DataBind();
+    }
+
+    protected void UserListView_ItemCommand(object sender, ListViewCommandEventArgs e)
+    {
+        switch (e.CommandName)
+        {
+            case "AddEmployees":
+                new UserManager().AddDefaultUsers();
+                DataBindUserList();
+                break;
+            default:
+                break;
+        }
+    }
+
+    protected void RoleListView_ItemCommand(object sender, ListViewCommandEventArgs e)
+    {
+        switch (e.CommandName)
+        {
+            case "AddDefaultRoles":
+                new RoleManager().AddDefaultRoles();
+                DataBindRoleList();
+                break;
+            default:
+                break;
         }
     }
 }
