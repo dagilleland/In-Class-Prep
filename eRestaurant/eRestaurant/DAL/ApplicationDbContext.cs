@@ -11,7 +11,7 @@ namespace eRestaurant.DAL
     internal class ApplicationDbContext : IdentityDbContext<ApplicationUser>
     {
         public ApplicationDbContext()
-            : base("DefaultConnection")
+            : base("DefaultConnection")//, throwIfV1Schema: false)
         {
         }
     }
