@@ -35,7 +35,7 @@ public partial class Admin_Security_Default : System.Web.UI.Page
     {
         switch (e.CommandName)
         {
-            case "AddEmployees":
+            case "AddWaiters":
                 new UserManager().AddDefaultUsers();
                 DataBindUserList();
                 break;
